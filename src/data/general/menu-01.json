@@ -1,0 +1,39 @@
+[
+
+    {
+        "id": 5,
+        "text": "Dashboard",
+        "path": "/blog",
+        "submenu": [
+            {
+                "id": 51,
+                "text": "Transactions",
+                "path": "/dashboard/transactions",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 52,
+                "text": "Overview",
+                "path": "/dashboard/overview",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 53,
+                "text": "Inventory",
+                "path": "/dashboard/inventory",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 54,
+                "text": "Chat Friends",
+                "path": "/dashboard/chatfriends",
+                "icon": "feather-fast-forward"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "text": "Contact",
+        "path": "/contact"
+    }
+]
