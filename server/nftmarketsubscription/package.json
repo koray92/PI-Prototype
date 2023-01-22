@@ -1,0 +1,32 @@
+{
+  "name": "nftmarketsubscription",
+  "version": "1.0.0",
+  "description": "",
+  "main": "subscription.ts",
+  "scripts": {
+    "start": "tsc -w | ts-node subscription.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc",
+    "build:watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "Emirhan Guven",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/node-cron": "^3.0.5",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.7.1",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "node-cron": "^3.0.2",
+    "package.json": "^2.0.1",
+    "prisma": "^4.7.1",
+    "sworm": "^3.8.1",
+    "ts-node": "^10.9.1",
+    "web3": "^1.8.1"
+  }
+}

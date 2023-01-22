@@ -1,0 +1,469 @@
+
+html,
+body {
+    width: 1780px;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+.dashboard-top
+{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding:35px;
+
+    border-right: 3px solid #CEC5D0;
+    border-bottom: 3px solid #CEC5D0;
+    border-left: 3px solid #CEC5D0;
+    border-radius: 0px 0px 30px 30px;
+}
+.dashboard-top-no-border
+{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    padding:35px;
+}
+
+.dashboard-top-element
+{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.dashboard-top-icon
+{
+    width: 70px;
+    height: 70px;
+}
+
+.dashboard-top-element-top-text
+{
+    font-weight:bold;
+    color:gray;
+    font-size:20px;
+}
+.dashboard-top-element-bot-text
+{
+    display: inline;
+}
+.dashboard-table-head-container
+{
+
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    padding:15px;
+    border: 2px solid #CEC5D0;
+    border-radius: 10px 10px 0px 0px;
+}
+.dashboard-table-body-container
+{
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    padding:15px;
+    border: 2px solid #CEC5D0;
+    border-radius: 0px 0px 10px 10px;
+}
+.dashboard-mid-filter-line
+{
+    width: 47%;
+}
+.dashboard-mid-image
+{
+    max-width: 100px;
+}
+.dashboard-buy-bar
+{
+    padding: 10px;
+    width: 100px;
+    height: 30px;
+    background-color:greenyellow;
+}
+.txtext
+{
+    background-color:yellow;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+.txlinkicon
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.txtext h6
+{
+    color:black;
+    margin: auto;
+    font-size: 15px;
+}
+.rarity-text
+{
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+}
+.table-icon
+{
+    width: 150px;
+    height: 150px;
+}
+.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.zui-table thead th {
+
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table-rounded {
+    border: none;
+}
+.zui-table-rounded thead th {
+  /* background-color: #CFAD70; */
+    text-align: center;
+    border: none;
+    text-shadow: 1px 1px 1px #ccc;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+.zui-table-rounded thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+.zui-table-rounded thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+.zui-table-rounded tbody td {
+    border: none;
+    border-top: solid 1px #957030;
+      /* background-color: #EED592; */
+}
+.zui-table-rounded tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+.zui-table-rounded tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+.inventory-weapon-image
+{
+    width: 200px;
+    height: 125px;
+    margin-left: 30px;
+}
+.inventory-weapons-container
+{
+    width:85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding:35px;
+    border-top: 3px solid #CEC5D0;
+    border-right: 3px solid #CEC5D0;
+    border-bottom: 3px solid #CEC5D0;
+    border-left: 3px solid #CEC5D0;
+    border-radius: 0px 0px 30px 30px;
+}
+.weapon-card
+{
+    padding: 30px;
+}
+.inventory-utilities-image
+{
+    width: 150px;
+    height: 155px;
+    margin-left: 70px;
+}
+.inventory-extras-image
+{
+    width:330px;
+    height: 225px;
+    margin-bottom:30px;
+}
+.dashboard-inventory-totalethicon
+{
+    width: 120px;
+    height:120px;
+
+}
+
+
+
+
+
+
+body{
+    background-color: #f4f7f6;
+    margin-top:20px;
+}
+.card {
+    background: #fff;
+    transition: .5s;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .55rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.chat-app .people-list {
+    width: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 7
+}
+
+.chat-app .chat {
+    margin-left: 280px;
+    border-left: 1px solid #eaeaea
+}
+
+.people-list {
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.people-list .chat-list li {
+    padding: 10px 15px;
+    list-style: none;
+    border-radius: 3px
+}
+
+.people-list .chat-list li:hover {
+    background: #efefef;
+    cursor: pointer
+}
+
+.people-list .chat-list li.active {
+    background: #efefef
+}
+
+.people-list .chat-list li .name {
+    font-size: 15px
+}
+
+.people-list .chat-list img {
+    width: 45px;
+    border-radius: 50%
+}
+
+.people-list img {
+    float: left;
+    border-radius: 50%
+}
+
+.people-list .about {
+    float: left;
+    padding-left: 8px
+}
+
+.people-list .status {
+    color: #999;
+    font-size: 13px
+}
+
+.chat .chat-header {
+    padding: 15px 20px;
+    border-bottom: 2px solid #f4f7f6
+}
+
+.chat .chat-header img {
+    float: left;
+    border-radius: 40px;
+    width: 40px
+}
+
+.chat .chat-header .chat-about {
+    float: left;
+    padding-left: 10px
+}
+
+.chat .chat-history {
+    padding: 20px;
+    border-bottom: 2px solid #fff
+}
+
+.chat .chat-history ul {
+    padding: 0
+}
+
+.chat .chat-history ul li {
+    list-style: none;
+    margin-bottom: 30px
+}
+
+.chat .chat-history ul li:last-child {
+    margin-bottom: 0px
+}
+
+.chat .chat-history .message-data {
+    margin-bottom: 15px
+}
+
+.chat .chat-history .message-data img {
+    border-radius: 40px;
+    width: 40px
+}
+
+.chat .chat-history .message-data-time {
+    color: #434651;
+    padding-left: 6px
+}
+
+.chat .chat-history .message {
+    color: #444;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative
+}
+
+.chat .chat-history .message:after {
+    bottom: 100%;
+    left: 7%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px
+}
+
+.chat .chat-history .my-message {
+    background: #efefef
+}
+
+.chat .chat-history .my-message:after {
+    bottom: 100%;
+    left: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #efefef;
+    border-width: 10px;
+    margin-left: -10px
+}
+
+.chat .chat-history .other-message {
+    background: #e8f1f3;
+    text-align: right
+}
+
+.chat .chat-history .other-message:after {
+    border-bottom-color: #e8f1f3;
+    left: 93%
+}
+
+.chat .chat-message {
+    padding: 20px
+}
+
+.online,
+.offline,
+.me {
+    margin-right: 2px;
+    font-size: 8px;
+    vertical-align: middle
+}
+
+.online {
+    color: #86c541
+}
+
+.offline {
+    color: #e47297
+}
+
+.me {
+    color: #1d8ecd
+}
+
+.float-right {
+    float: right
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+@media only screen and (max-width: 767px) {
+    .chat-app .people-list {
+        height: 465px;
+        width: 100%;
+        overflow-x: auto;
+        background: #fff;
+        left: -400px;
+        display: none
+    }
+    .chat-app .people-list.open {
+        left: 0
+    }
+    .chat-app .chat {
+        margin: 0
+    }
+    .chat-app .chat .chat-header {
+        border-radius: 0.55rem 0.55rem 0 0
+    }
+    .chat-app .chat-history {
+        height: 300px;
+        overflow-x: auto
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .chat-app .chat-list {
+        height: 650px;
+        overflow-x: auto
+    }
+    .chat-app .chat-history {
+        height: 600px;
+        overflow-x: auto
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .chat-app .chat-list {
+        height: 480px;
+        overflow-x: auto
+    }
+    .chat-app .chat-history {
+        height: calc(100vh - 350px);
+        overflow-x: auto
+    }
+}
+
