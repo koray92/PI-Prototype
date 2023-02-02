@@ -9,7 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <a href="/"> <img src="logo.png" alt="hoobank" className="w-[90px] h-[60px]" /></a>
+      {/*
+        <a href="/"> <img src="logo.png" alt="hoobank" className="w-[90px] h-[60px]"/></a>
+      */}
 
 
 
@@ -28,7 +30,7 @@ const Navbar = () => {
                 ))}
             </ul>
 
-:   <a href="/">Home</a>}
+:   <a className="text-white" href="/">Home</a>}
         }
 
 

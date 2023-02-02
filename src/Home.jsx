@@ -28,7 +28,7 @@ const Home = () => (
         </div>
 
 
-        <div className='grid md:flex my-[150px] ml-5'>
+        <div className='grid md:flex md:ml-5 my-[150px] '>
             <div className=' w-[345px] h-[640px]  rounded-3xl bg-black-gradient-2 mainpage-box  md:w-[345px] mainpage-box h-[640px]  rounded-3xl bg-black-gradient-2 ' >
                 <div className='w-full'>
                     <img src='/images/icons/icon1.png' className='mx-auto pt-10 w-28'></img>
@@ -87,7 +87,7 @@ const Home = () => (
 <div id="game" className="h-14"></div>
         <section id="game" className="mb-48">
             <div className="grid md:flex justify-center">
-                <div className="mr-28">
+                <div className="md:mr-28">
                     <h2 className={` ${styles.heading2} gametext`}>
                         Authentic postapocalyptic <br className="sm:block hidden" /> Open World
 
@@ -133,8 +133,8 @@ const Home = () => (
             </div>
 
             <div className="sm:flex md: grid justify-center mt-36 ">
-                <div className="mr-28">
-                    <h2 className={`${styles.heading2} gametext`}>
+                <div className="md:mr-28">
+                    <h2 className={`md:${styles.heading2} gametext`}>
                         Redefiniton of the  <br className="sm:block hidden" /> Survival-Shooter Genre
 
                     </h2>
@@ -161,10 +161,10 @@ const Home = () => (
             <div className="md:grid grid-cols-2 gap-6">
 
                 <div
-                    className="flex justify-center text-6xl"
+                    className="md:flex justify-center text-6xl"
                 >
-                    <div className=" my-10 " style={{width:"30%"}}>
-                        <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+                    <div className=" md:my-10 md:w-1/3" >
+                        <div className={`sm: mt-10 flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
                             <img src={"/images/team/Koray.jpg"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
 
                             {/* gradient start */}
@@ -193,11 +193,12 @@ const Home = () => (
                     </div>
                 </div>
                 <div
-                    className="flex justify-center text-6xl"
+                    className="md:flex justify-center text-6xl"
                 >
-                    <div className=" my-10 " style={{width:"30%"}}>
-                        <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-                            <img src={"/images/team/DBayer.png"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
+                    <div className=" md:my-10 md:w-1/3" >
+                        <div className={`sm: mt-10 flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+
+                        <img src={"/images/team/DBayer.png"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
 
                             {/* gradient start */}
                             <div className="absolute z-[0] w-[90%] h-[95%] top-0 pink__gradient" />
@@ -221,11 +222,12 @@ const Home = () => (
                     </div>
                 </div>
                 <div
-                    className="flex justify-center text-6xl"
+                    className="md:flex justify-center text-6xl"
                 >
-                    <div className=" my-10 " style={{width:"30%"}}>
-                        <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-                            <img src={"/images/team/Emir.png"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
+                    <div className=" md:my-10 md:w-1/3" >
+                        <div className={`sm: mt-10 flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+
+                        <img src={"/images/team/Emir.png"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
 
                             {/* gradient start */}
                             <div className="absolute z-[0] w-[90%] h-[95%] top-0 pink__gradient" />
@@ -250,11 +252,12 @@ const Home = () => (
                     </div>
                 </div>
                 <div
-                    className="flex justify-center text-6xl"
+                    className="md:flex justify-center text-6xl"
                 >
-                    <div className=" my-10 " style={{width:"30%"}}>
-                        <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-                            <img src={"/images/team/Murat.png"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
+                    <div className=" md:my-10 md:w-1/3" >
+                        <div className={`sm: mt-10 flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+
+                        <img src={"/images/team/Murat.png"} alt="billing" className="w-[60%] h-[60%] relative z-[5] rounded-3xl mb-6" />
 
                             {/* gradient start */}
                             <div className="absolute z-[0] w-[90%] h-[95%] top-0 pink__gradient" />
@@ -278,11 +281,11 @@ const Home = () => (
                     </div>
                 </div>
                 <div
-                    className="flex justify-center text-6xl"
+                    className="md:flex justify-center text-6xl"
                 >
-                    <div className=" my-10 " style={{width:"30%"}}>
-                        <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-                            <img src={"/images/team/Waihon.jpg"} alt="billing" className="w-[80%] h-[80%] relative z-[5] rounded-3xl mb-6" />
+                    <div className=" md:my-10 md:w-1/3" >
+                        <div className={`sm: mt-10 flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+                        <img src={"/images/team/Waihon.jpg"} alt="billing" className="w-[80%] h-[80%] relative z-[5] rounded-3xl mb-6" />
 
                             {/* gradient start */}
                             <div className="absolute z-[0] w-[90%] h-[95%] top-0 pink__gradient" />
@@ -313,7 +316,7 @@ const Home = () => (
 
 
 
-        <div className={"px-10"}>
+        <div className={"md:px-10"}>
             <ContactUs />
 
         </div>
