@@ -28,9 +28,10 @@ const Home = () => (
         </div>
 
 
-        <div className='grid md:flex md:ml-5 my-[150px] '>
-            <div className=' w-[345px] h-[640px]  rounded-3xl bg-black-gradient-2 mainpage-box  md:w-[345px] mainpage-box h-[640px]  rounded-3xl bg-black-gradient-2 ' >
-                <div className='w-full'>
+        <div className='grid justify-center md:flex md:justify-center md:ml-5 my-[150px]  '>
+
+            <div className='w-[325px] h-[640px] ml-[30px] mainpage-box rounded-3xl  bg-black-gradient-2 my-10 ' >
+                <div className=''>
                     <img src='/images/icons/icon1.png' className='mx-auto pt-10 w-28'></img>
                     <h1 className="font-poppins font-semibold ss:text-[28px] text-center text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
                         Game Enjoyment
@@ -39,7 +40,7 @@ const Home = () => (
                         We understand the key levers to create fantastic games due to our passionate gaming experience for over 20 years. Authenticity and usability are always the highest priorities. </p>
                 </div>
             </div>
-            <div className=' w-[325px] h-[640px] ml-[30px] mainpage-box rounded-3xl  bg-black-gradient-2'  >
+            <div className=' w-[325px] h-[640px] ml-[30px] mainpage-box rounded-3xl  bg-black-gradient-2 my-10'  >
                 <div className=''>
                     <img src='/images/icons/icon2.png' className='mx-auto pt-10 w-28'></img>
                     <h1 className="font-poppins font-semibold ss:text-[28px] text-center text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
@@ -49,8 +50,8 @@ const Home = () => (
                         For certain accomplishments in the game we reward gamers with NFTs, thereby we attract gamers globally and increase the game retention significantly.</p>
                 </div>
             </div>
-            <div className=' w-[375px] h-[640px] ml-[30px]  mainpage-box rounded-3xl  bg-black-gradient-2' >
-                <div className='w-full'>
+            <div className=' w-[375px] h-[640px] ml-[30px]  mainpage-box rounded-3xl  bg-black-gradient-2 my-10' >
+                <div className=''>
                     <div className="w-full text-center mt-10">
                         <img src='/images/icons/icon3.png' className='w-20 text inline-block'></img>
                         <img src='/images/icons/icon4.png' className=' w-20 inline-block'></img>
@@ -62,7 +63,7 @@ const Home = () => (
                         We are highly committed to finding the game enjoyment on the cutting edge of blockchain technology and web3 primitives. With a deep sense of curiosity and a strong desire to implement innovations, we constantly look for ways to set new gaming standards. We use UE5 and combine it with the blockchain 1 layer to set new heights in the gaming industry.</p>
                 </div>
             </div>
-            <div className=' w-[275px] h-[640px] ml-[30px] mainpage-box rounded-3xl  bg-black-gradient-2' >
+            <div className=' w-[275px] h-[640px] ml-[30px] mainpage-box rounded-3xl  bg-black-gradient-2 my-10' >
                 <div className='w-full'>
                     <img src='/images/icons/icon5.png' className='mx-auto pt-10 w-28'></img>
                     <h1 className="font-poppins font-semibold ss:text-[28px] text-center text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
@@ -72,7 +73,7 @@ const Home = () => (
                         All our games include gamer oriented Play-and-own concepts which enable gamers to gain crypto in lots of ways and provide valid reasons to keep playing our games.</p>
                 </div>
             </div>
-            <div className=' w-[275px] h-[640px] ml-[30px]  mainpage-box rounded-3xl  bg-black-gradient-2' >
+            <div className=' w-[275px] h-[640px] ml-[30px]  mainpage-box rounded-3xl  bg-black-gradient-2 my-10' >
                 <div className='w-full'>
                     <img src='/images/icons/icon6.png' className='mx-auto pt-10 w-28'></img>
                     <h1 className="font-poppins font-semibold ss:text-[28px] text-center text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
