@@ -53,8 +53,8 @@ const Home = () => (
             <div className=' w-[375px] h-[640px] ml-[30px]  mainpage-box rounded-3xl  bg-black-gradient-2 my-10' >
                 <div className=''>
                     <div className="w-full text-center mt-10">
-                        <img src='/images/icons/icon3.png' className='w-20 text inline-block'></img>
-                        <img src='/images/icons/icon4.png' className=' w-20 inline-block'></img>
+                        <img src='/images/icons/icon3.png' className='w-28 text inline-block'></img>
+                        <img src='/images/icons/icon4.png' className=' w-28 inline-block'></img>
                     </div>
                     <h1 className="font-poppins font-semibold ss:text-[28px] text-center text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
                         Technology
