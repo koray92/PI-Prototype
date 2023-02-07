@@ -13,11 +13,31 @@ const Footer = () => (
     </div>
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
+    
       <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
-          2021-2023 Redeemer Games UG  <a href="/Legaldisclosure">Legal Disclosure | </a> <a href="/termsofuse">Term of Use</a>
-      </p>
+      <div className="flex">
+        <div className="mr-4">
+        © 2021-2023 Redeemer Games UG  Legal Disclosure : 
+      </div>
+      <div className=" text-left text-sm mt-1" >
+      
+        
+      Redeemer Games UG<br />
+      Ludwigstr. 2, <br />
+      63067 Offenbach am Main, Germany <br />
+      Owner: Koray Anil Akman <br />
+      Register entry: register B <br />
+      Register court Offenbach am Main <br />
+      Register number: HRB 54354
+      </div>
 
+      </div>
+          
+      </p>
+      
         <div className="text-center">
+            {
+            /*
             <a
                 href="https://www.instagram.com/rdmrgames/"
                 className=""
@@ -36,6 +56,8 @@ const Footer = () => (
             >
                 <FontAwesomeIcon className="mx-5" style={{color:"white"}} icon={faTwitter} size="2x" />
             </a>
+            */
+            }
         </div>
     </div>
   </section>
