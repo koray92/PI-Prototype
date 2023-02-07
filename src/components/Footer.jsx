@@ -16,8 +16,8 @@ const Footer = () => (
     
       <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
       <div className="flex">
-        <div className="mr-4">
-        © 2021-2023 Redeemer Games UG  Legal Disclosure : 
+        <div className="mr-2">
+        © 2021-2023 Redeemer Games UG &nbsp; &nbsp;   Legal Disclosure : 
       </div>
       <div className=" text-left text-sm mt-1" >
       
