@@ -94,7 +94,6 @@ export default async function handler(req, res) {
                         expiresIn: "5m",
                     }
                 );
-
                 const link = `http://localhost:3000/check-activation/${User.user_id}/${token}`;
                 const transporter = nodemailer.createTransport({
                     service: "gmail",
@@ -109,7 +108,6 @@ export default async function handler(req, res) {
                     subject: "Password Reset",
                     text: link,
                 };
-
                 transporter.sendMail(mailOptions, (error, info) => {
                     if (error) {
                         console.log(error);

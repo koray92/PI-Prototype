@@ -45,7 +45,6 @@ const ProductDetailsArea = ({ space, className, product }) => {
           await nftmarketcontractobject.methods.getAllListedNfts().call()
             .then((response) => {
                 console.log(response.filter(person => person.id == product?.nftid)[0]?.price);
-                console.log("bu oc **");
                 setBidsowner(response);
 
             })

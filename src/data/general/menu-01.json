@@ -1,5 +1,9 @@
 [
-
+    {
+        "id": 4,
+        "text": "Home",
+        "path": "/home"
+    },
     {
         "id": 5,
         "text": "Dashboard",

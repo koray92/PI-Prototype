@@ -391,7 +391,7 @@ const PlaceBet = ({
 
                      }
                      {
-                         <h5 className="title">Seller : {userName}</h5>
+                         <h5 className="title">Seller : {"muratyvz13"}</h5>
 
                      }
 

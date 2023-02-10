@@ -28,7 +28,6 @@ const TopSeller = ({ name,owner,receiver, time, path, image, eth, isVarified }) 
      const res = await nftmarketcontractobject.methods
        .recover([transaction.wallet_id,transaction.receiver,transaction.price,transaction.nft_id,transaction.startTime,transaction.endTime,"0",transaction.signature])
        .call();
-     console.log("res"+res);
 
 
 

@@ -114,4 +114,4 @@ function connectDB(tx) {
     });
 }
 exports.connectDB = connectDB;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.jsx.map
