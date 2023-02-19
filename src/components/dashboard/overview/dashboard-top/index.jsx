@@ -15,14 +15,7 @@ const topside = () => {
     );
     const { data: session } = useSession();
     useEffect(() => {
-        const userBalance = async () => {
-            const balance = await HTTP_WEB3?.eth.getBalance(
-                window?.ethereum.selectedAddress
-            );
-            const ethBalance = Web3?.utils.fromWei(balance, "ether");
-            setUserBalance(parseFloat(ethBalance).toFixed(3));
-            console.log(`-----${userBalance}---s-`);
-        };
+
         const getTotalSale = async () => {
             await axios
                 .post("/api/auth/totalsale", {
@@ -36,10 +29,7 @@ const topside = () => {
                     console.log(error);
                 });
         };
-
-        getTotalSale();
-        userBalance();
-    }, [userBalance, totalEarning]);
+    }, []);
     return (
         <div>
             <Dashboardcard />

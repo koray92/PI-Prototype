@@ -9,7 +9,7 @@ import ExploreProductArea from "@containers/explore-product/layout-02";
 import TopSellerArea from "@containers/top-seller/layout-01";
 import CollectionArea from "@containers/collection/layout-01";
 import { normalizedData } from "@utils/methods";
-
+import Botside from "@components/dashboard/marketplace-nft-bot";
 // Demo data
 import homepageData from "../data/homepages/home-03.json";
 import sellerData from "../data/sellers.json";
@@ -37,15 +37,17 @@ const Home02 = () => {
         <Wrapper>
             <SEO pageTitle="Home Three" />
             <Header />
+            <Botside />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />
+
                 <LiveExploreArea
                     data={{
                         ...content["live-explore-section"],
                         products: liveAuctionData,
                     }}
                 />
-                <ServiceArea data={content["service-section"]} />
+                
                 <ExploreProductArea
                     data={{
                         ...content["explore-product-section"],

@@ -21,8 +21,6 @@ const Transactions = (className) => (
                 <Listingtable />
                 <Soldtable />
             </div>
-            <h1 className="text-center mt-5">User Earn Chart (ETH)</h1>
-            {/* <Chart /> */}
         </main>
         <Footer />
     </Wrapper>

@@ -20,6 +20,7 @@ const HeroArea = ({ data }) => (
             <div className="row g-4">
                 <div className="col-lg-5">
                     <div className="wrapper">
+
                         {data?.largeProducts && (
                             <Slider
                                 options={SliderOptions}

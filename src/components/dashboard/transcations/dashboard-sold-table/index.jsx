@@ -21,6 +21,11 @@ const soldtable = () => {
         const deneme = items?.filter((person) => person.item_id == itemid);
         return deneme?.length>0 ? deneme[0]?.item_image : null;
     };
+    const findItemName = (itemid) => {
+        const deneme = items?.filter((person) => person.item_id == itemid);
+
+        return deneme?.length>0 ? deneme[0]?.item_name : null;
+    };
     const denemee = async (addr) => {
         return addr + 'x';
     }
@@ -62,89 +67,188 @@ const soldtable = () => {
     return (
         <div className="me-2" style={{width:"48%"}}>
             <div className="dashboard-top-no-border">
-                <h3>Recently Sold-Bought:</h3>
+                <h3>Recently Sold/Purchase:</h3>
             </div>
-            <div>
+            <div style={{backgroundColor:"#252734"}}>
                 <ul
-                    className="nav nav-tabs dashboard-table-head-container"
-                    id="myTab"
-                    role="tablist"
+                  className="nav nav-tabs dashboard-table-head-container"
+                  id="myTab"
+                  role="tablist"
                 >
-                    <li className="nav-item" role="presentation">
-                        <button
-                            className="nav-link active"
-                            id="home-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#home"
-                            type="button"
-                            role="tab"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setCategory(1);
-                            }}
-                        >
-                            <img
-                                src="/images/icons/tab-1.png"
-                                width="40"
-                                height="40"
-                            />
-                            Weapon
-                        </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <button
-                            className="nav-link"
-                            id="profile-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#profile"
-                            type="button"
-                            role="tab"
-                            aria-controls="profile"
-                            aria-selected="false"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setCategory(2);
-                            }}
-                        >
-                            <img
-                                src="/images/icons/tab-2.png"
-                                width="40"
-                                height="40"
-                            />
-                            Accessory
-                        </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                        <button
-                            id="profile-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#profile"
-                            type="button"
-                            role="tab"
-                            aria-controls="profile"
-                            aria-selected="false"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setCategory(3);
-                            }}
-                        >
-                            <img
-                                src="/images/icons/tab-3.png"
-                                width="40"
-                                height="40"
-                            />
-                            Ammo
-                        </button>
-                    </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home"
+                      type="button"
+                      role="tab"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(1);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab1.png"
+                        width="50"
+                        height="60"
+                      />
+                      <p style={{fontWeight:"bold",fontSize:"17px"}}>Weapon</p>
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(2);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab2.png"
+                        width="50"
+                        height="60"
+                      />
+                      <p style={{fontWeight:"bold",fontSize:"17px"}}>Ammo</p>
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(2);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab3.png"
+                        width="32"
+                        height="40"
+                      />
+                      <p style={{fontWeight:"bold",fontSize:"17px"}}>Characters</p>
+
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(2);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab4.png"
+                        width="72"
+                        height="30"
+                      />
+                      <p style={{fontWeight:"bold",fontSize:"17px"}}>Clothes</p>
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(2);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab6.png"
+                        width="51"
+                        height="30"
+                      />
+                      <p style={{fontWeight:"bold",fontSize:"17px"}}>Medicine</p>
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(2);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab5.png"
+                        width="52"
+                        height="30"
+                      />
+                      <p style={{fontWeight:"bold",fontSize:"17px",marginBottom:"0px"}}>Weapon</p>
+                      <p style={{fontWeight:"bold",fontSize:"17px"}}>Extensions</p>
+
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCategory(2);
+                      }}
+                    >
+                      <img
+                        src="/images/transactionicons/tab7.png"
+                        width="55"
+                        height="30"
+                      />
+                      <p style={{fontWeight:"bold"}}>Utilities</p>
+
+                    </button>
+                  </li>
+
                 </ul>
                 <div className="dashboard-table-body-container">
                     <table className="zui-table zui-table-rounded">
                         <thead>
                             <tr>
-                                <th>Icon</th>
-                                <th>Buyer</th>
-                                <th>Price (ETH)</th>
-                                <th>Date</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -155,30 +259,51 @@ const soldtable = () => {
                                         <tr key={value}>
                                             <td className="table-icon">
                                                 <img src={findItemImage(value.item_id)} />
-
                                             </td>
                                             <td>
-                                                <div className="">
-                                                    <h6 className="font-monospace text-center">
-                                                        {value.users.user_name}
-
-                                                    </h6>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <h5 className="font-monospace">{value.eth_amount}</h5>
-                                            </td>
-                                            <td>
-                                                <h6 className="font-monospace" style={{fontSize:"15px"}}>
-                                                    {value.transaction_timestamp}{" "}
-                                                    <Link href={`https://goerli.etherscan.io/tx/${value.transaction_hash}`}><img
-                                                            className=""
-                                                            width="30px"
-                                                            height="30px"
-                                                            src="/images/icons/etherscan.png"
-                                                        />
-                                                    </Link>
+                                              <div className="">
+                                                <h6 className="color-white text-center" style={{fontSize:"12px",fontWeight:"300",margin:"auto",padding:"5px",backgroundColor:"#70B007",borderRadius:"15px"}}>
+                                                  {findItemName(value.item_id)}
                                                 </h6>
+                                                <p style={{textAlign:"center",fontSize:"12px",fontWeight:"100",}}>
+                                                  Breed Count:1
+                                                </p>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div className="d-flex">
+                                                <div className="mx-2">
+                                                  <h6 style={{fontSize:"13px"}}>Buyer</h6>
+                                              <h6 style={{fontSize:"13px"}} className="font-monospace">{
+                                                value.buyer_wallet_id == "0x144aad362af3B71d42781f8f750777B3523c500B" && "muratyvz13"
+                                              }
+                                                {
+                                                  value.buyer_wallet_id == "0xf9aD346CBa2eEB7d9738038002b614AdEa966dB6" && "Koray92"
+                                                }</h6>
+                                                </div>
+                                                <div>
+                                                  <h6 style={{fontSize:"13px"}}>Seller</h6>
+                                                  <h6 style={{fontSize:"13px"}} className="font-monospace">{
+                                              value.seller_wallet_id == "0x144aad362af3B71d42781f8f750777B3523c500B" && "muratyvz13"
+                                            }
+                                              {
+                                                value.seller_wallet_id == "0xf9aD346CBa2eEB7d9738038002b614AdEa966dB6" && "Koray92"
+                                              }</h6>
+                                              </div>
+                                              </div>
+                                          </td>
+                                            <td>
+                                              <div className="d-flex">
+                                                <div style={{display:"grid"}}>
+                                                  <h6 style={{marginBottom:"0px"}}>{value.eth_amount+" ETH"}</h6>
+                                                  <p style={{marginBottom:"0px"}}>{"$ "+value.eth_amount*1500}</p>
+                                                  <h6 style={{fontSize:"13px"}}>{value.transaction_timestamp.slice(0, 10)}{" "}</h6>
+
+                                                </div>
+                                                <Link href={"https://goerli.etherscan.io/tx/"+value.transaction_hash} style={{cursor:"pointer"}}>
+                                                  <img src="/images/icons/arrow.png" style={{width:"20px",height:"20px",margin:"auto"}}></img>
+                                                </Link>
+                                              </div>
                                             </td>
                                         </tr>
                                     )

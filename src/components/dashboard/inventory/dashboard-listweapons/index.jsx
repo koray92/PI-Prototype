@@ -1,11 +1,98 @@
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-
+import ProgressBar from "react-bootstrap/ProgressBar";
+import { HTTP_WEB3 } from "../../../../utils/variables"
+import Web3 from "web3";
 const topside = () => {
     const { data: session } = useSession();
     const [inventory, setInventory] = useState({});
+    const container = {
+        justifyContent: "space-between",
+        display: "flex",
+        position: "relative",
+        backgroundColor: "#252434",
+        height: "200px",
+        border: "10px solid #46454f",
+        zIndex:"5"
+    };
+    const containerright = {
+        backgroundColor: "#252434",
+        position: "relative",
+        height: "200px",
+        border: "10px solid #46454f",
+        zIndex:"5"
+    };
+    const containerchart = {
+        display: "flex",
+        justifyContent: "space-between",
+        backgroundColor: "#252434",
+        height: "500px",
+        border: "10px solid #46454f",
+    };
+    const containercharttime = {
+        backgroundColor: "#252434",
+        height: "600px",
+        border: "10px solid #46454f",
+        padding: "90px",
+        paddingTop: "30px",
+    };
+    const leftdiv = {
+        width: "30%",
+        marginTop: "auto",
+        marginBottom: "auto",
+        marginLeft: "20px",
+    };
+    const rightdiv = {
+        width: "40%",
+        marginTop: "auto",
+        marginBottom: "auto",
+    };
+    const text = {
+        lineHeight: "0.6",
+    };
+    const textp = {
+        lineHeight: "0.6",
+        color: "#0093ec",
+        display: "inline",
+        marginRight: "5px",
+    };
+    const textp2 = {
+        lineHeight: "0.6",
+        color: "#b3b6b9",
+        display: "inline",
+        marginRight: "5px",
+    };
+    const textp3 = {
+        lineHeight: "0.6",
+        color: "#0c932f",
+        display: "inline",
+        marginRight: "5px",
+    };
+    const [key, setKey] = useState("Category");
+    const [balance, setBalance] = useState(0);
+    const [category, setCategory] = useState(0);
+    const categoryClick = async () => {
+        setKey("Category");
+    };
+    const timeClick = () => {
+        setKey("Time");
+    };
+    useEffect(() => {
+        const userBalance = async () => {
+            const balanceeth = await HTTP_WEB3?.eth.getBalance(
+              Web3.utils.toChecksumAddress(session?.user?.user_wallet_id)
+            );
+            const ethBalance = Web3?.utils.fromWei(balanceeth, "ether");
+            console.log(`-----${ethBalance}---s-`);
+
+            setBalance(parseFloat(ethBalance).toFixed(3));
+        };
+        if (session) {
+            userBalance();
+        }
+    }, [session]);
     useEffect(() => {
         const getInventory = async () => {
             await axios
@@ -27,21 +114,295 @@ const topside = () => {
     return (
         <div>
             <div className="container">
+                <div
+                  style={{
+                      marginTop: "20px",
+                      display: "flex",
+                      justifyContent: "space-around",
+                  }}
+                >
+                    <div style={{ width: "30%",position:"relative"}}>
+                        <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+                        <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
+                        <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
+                        <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
+
+                        <div style={container}>
+
+                            <div style={leftdiv}>
+                                <h6 style={text}>ETH:</h6>
+                                <h6 style={text}>{balance}</h6>
+                                <p style={textp}>${1500 * balance}</p>
+                                <p style={textp2}>ETH</p>
+                                <p style={textp3}>(+2.33%)</p>
+
+                            </div>
+                            <div style={rightdiv}>
+                                <img
+                                  src="/images/dashboard/eth.png"
+                                  style={{ width: "130px" }}
+                                />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style={{ width: "30%",position:"relative"}}>
+                        <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (PIX)</h3>
+                        <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
+                        <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
+                        <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
+
+
+                        <div style={container}>
+
+                            <div style={leftdiv}>
+                                <h6 style={text}>PIX:</h6>
+                                <h6 style={text}>2.52000</h6>
+                                <p style={textp}>$0.04</p>
+                                <p style={textp2}>PIX</p>
+                                <p style={textp3}>(+2.33%)</p>
+                            </div>
+                            <div style={rightdiv}>
+                                <img
+                                  src="/images/dashboard/pixcoinicon.png"
+                                  style={{ width: "130px" }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ width: "30%",position:"relative"}}>
+                        <h3 style={{zIndex:"5",position:"relative"}} className="container">Total Volume of Inventory:</h3>
+                        <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
+                        <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
+                        <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
+                        <div style={container}>
+                            <div style={leftdiv}>
+                                <h6 style={text}>ETH:</h6>
+                                <h6 style={text}>{"10"}</h6>
+                                <p style={textp}>${1500 * 10}</p>
+                                <p style={textp2}>ETH</p>
+                                <p style={textp3}>(+2.33%)</p>
+                            </div>
+                            <div style={rightdiv}>
+                                <img
+                                  src="/images/dashboard/eth.png"
+                                  style={{ width: "130px" }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style={{ width: "35%",marginRight:"auto",marginLeft:"auto",marginBottom:"30px",marginTop:"30px"}}>
+                    <h4 style={{zIndex:"5",position:"relative"}} className="container">Total Volume of selected Categories:</h4>
+                    <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
+                    <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
+                    <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
+                    <div style={container}>
+                        <div style={leftdiv}>
+                            <h4 style={text}>ETH:</h4>
+                            <h4 style={text}>{"4"}</h4>
+                            <p style={textp}>${1500 * 4}</p>
+                            <p style={textp2}>ETH</p>
+                            <p style={textp3}>(+2.33%)</p>
+                        </div>
+                        <div style={rightdiv}>
+                            <img
+                              src="/images/dashboard/eth.png"
+                              style={{ width: "130px" }}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{backgroundColor:"#252734"}}>
+                    <ul
+                      className="nav nav-tabs filter-weapons"
+                      id="myTab"
+                      role="tablist"
+                    >
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link active"
+                              id="home-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#home"
+                              type="button"
+                              role="tab"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(1);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab1.png"
+                                  width="60"
+                                  height="60"
+                                />
+                                <p style={{fontWeight:"bold"}}>Weapon</p>
+                            </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile"
+                              aria-selected="false"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(2);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab2.png"
+                                  width="60"
+                                  height="60"
+                                />
+                                <p style={{fontWeight:"bold"}}>Ammo</p>
+                            </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile"
+                              aria-selected="false"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(2);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab3.png"
+                                  width="37"
+                                  height="60"
+                                />
+                                <p style={{fontWeight:"bold"}}>Characters</p>
+                            </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile"
+                              aria-selected="false"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(2);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab4.png"
+                                  width="80"
+                                  height="30"
+                                />
+                                <p style={{fontWeight:"bold",lineHeight:"2"}}>Clothes</p>
+
+                            </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile"
+                              aria-selected="false"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(2);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab6.png"
+                                  width="60"
+                                  height="30"
+                                />
+                                <p style={{fontWeight:"bold"}}>Medicine</p>
+
+                            </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile"
+                              aria-selected="false"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(2);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab5.png"
+                                  width="60"
+                                  height="30"
+                                />
+                                <p style={{fontWeight:"bold"}}>Weapon Extensions</p>
+
+                            </button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                            <button
+                              className="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile"
+                              aria-selected="false"
+                              onClick={(e) => {
+                                  e.preventDefault();
+                                  setCategory(2);
+                              }}
+                            >
+                                <img
+                                  src="/images/transactionicons/tab7.png"
+                                  width="60"
+                                  height="30"
+                                />
+                                <p style={{fontWeight:"bold"}}>Utilities</p>
+
+                            </button>
+                        </li>
+
+                    </ul>
+                    </div>
+
                 <div className="row">
                     {Object.entries(inventory).map(([key, value]) => (
-                        <div className="col-xl-3 col-lg-3 col-sm-6">
-                            <div className=" border border-5 rounded-pill mt-5 bg-color--2 weapon-card">
+                        <div className="col-xl-3 col-lg-3 col-sm-6" style={{margin:"30px",width:"25%",height:"550px",backgroundColor:"#242436",borderRadius:"25px"}}>
+                            <div>
                                 <img
-                                    className="inventory-weapon-image"
+                                    className="mt-2"
                                     src={value.item.item_image}
+                                    style={{borderRadius:"25px"}}
                                 />
-
                                 <div>
-                                    <h3 className="mt-0 text-center">
+                                    <h3 className="mt-5 text-center">
                                         {value.item.item_name}
                                     </h3>
-                                    <h3 className="mt-0 text-center color-purple">
-                                        {value.item.item_design}
+                                    <h3 className="mt-5 text-center" style={{fontWeight:"normal"}}>
+                                        Category : {value.item.item_design}
                                     </h3>
                                 </div>
                             </div>
@@ -87,7 +448,7 @@ const topside = () => {
                 </div>
                 */
                 }
-                     
+
             </div>
         </div>
     );

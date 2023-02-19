@@ -27,6 +27,7 @@ const Slider = ({ options, children, prevIcon, nextIcon, className }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
+        autoplay:true,
         cssEase: "linear",
         prevArrow: <ArrowButton icon={prevIcon} />,
         nextArrow: <ArrowButton icon={nextIcon} />,

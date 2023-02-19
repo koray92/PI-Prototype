@@ -7,7 +7,7 @@
     {
         "id": 5,
         "text": "Dashboard",
-        "path": "/blog",
+        "path": "/dashboard/transactions",
         "submenu": [
             {
                 "id": 51,
@@ -36,8 +36,47 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "text": "Marketplace",
+        "path": "/dashboard/nft-marketplace",
+        "submenu": [
+            {
+                "id": 51,
+                "text": "Marketplace - NFT",
+                "path": "/dashboard/nft-marketplace",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 52,
+                "text": "Marketplace - PIX",
+                "path": "/dashboard/marketplace-pix",
+                "icon": "feather-fast-forward"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "text": "Friends",
+        "path": "/product"
+    },
+    {
+        "id": 8,
+        "text": "Whitepaper",
+        "path": "/product"
+    },
+    {
+        "id": 9,
+        "text": "FAQs",
+        "path": "/product"
+    },
+    {
+        "id": 10,
+        "text": "Term & Conditions",
+        "path": "/product"
+    },
+    {
+        "id": 11,
+        "text": "Contact",
         "path": "/product"
     }
 ]

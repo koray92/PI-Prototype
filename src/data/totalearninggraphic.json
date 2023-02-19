@@ -1,0 +1,52 @@
+
+[
+  {
+    "id": 0,
+    "title": "Weapons",
+    "percentage": "80",
+    "backgroundcolor": "purple-progress-bar",
+    "barcount": 30
+  },
+  {
+    "id": 1,
+    "title": "Ammo",
+    "percentage": "50",
+    "backgroundcolor": "aqua-progress-bar",
+    "barcount": 40
+  },
+  {
+    "id": 2,
+    "title": "Characters",
+    "percentage": "65",
+    "backgroundcolor": "red-progress-bar",
+    "barcount": 50
+  },
+  {
+    "id": 3,
+    "title": "Clothes",
+    "percentage": "30",
+    "backgroundcolor": "green-progress-bar",
+    "barcount": 60
+  },
+  {
+    "id": 4,
+    "title": "Medicine",
+    "percentage": "40",
+    "backgroundcolor": "yellow-progress-bar",
+    "barcount": 70
+  },
+  {
+    "id": 5,
+    "title": "Weapon Extensions",
+    "percentage": "40",
+    "backgroundcolor": "blue-progress-bar",
+    "barcount": 80
+  },
+  {
+    "id": 6,
+    "title": "Utilities",
+    "percentage": "40",
+    "backgroundcolor": "orange-progress-bar",
+    "barcount": 90
+  }
+]

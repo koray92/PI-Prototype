@@ -21,7 +21,7 @@ const LoginForm = ({ className }) => {
     const { redirect } = router.query;
     useEffect(() => {
         if (session?.user) {
-            router.push("/product");
+            router.push("/home");
         }
     }, [router, session]);
     const submitHandler = async ({ user_mail, user_password }) => {

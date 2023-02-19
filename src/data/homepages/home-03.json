@@ -6,124 +6,148 @@
             "largeProducts": [
                 {
                     "id": 1,
-                    "title": "Cubic Bazier",
+                    "title": "Weapons",
                     "slug": "/collection",
                     "author": {
-                        "name": "Mark Jordan",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-01.jpg"
+                        "src": "/images/marketplaceimages/NFT-Handgun.jpg"
                     }
                 },
                 {
                     "id": 2,
-                    "title": "Faminho24",
+                    "title": "",
                     "slug": "/collection",
                     "author": {
-                        "name": "Farik Shaikh",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-02.jpg"
+                        "src": "/images/marketplaceimages/NFT-rifle.jpg"
                     }
                 },
                 {
                     "id": 3,
-                    "title": "Tzniistan",
+                    "title": "",
                     "slug": "/collection",
                     "author": {
-                        "name": "John Doe",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-03.jpg"
+                        "src": "/images/marketplaceimages/NFT-Rocket-Launcher.jpg"
                     }
                 },
                 {
                     "id": 4,
-                    "title": "Bazier",
+                    "title": "",
                     "slug": "/collection",
                     "author": {
-                        "name": "Olive Yew",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-04.jpg"
+                        "src": "/images/marketplaceimages/NFT-Shotgun.jpg"
+                    }
+                },
+                {
+                    "id": 4,
+                    "title": "",
+                    "slug": "/collection",
+                    "author": {
+                        "name": "",
+                        "slug": "/author"
+                    },
+                    "image": {
+                        "src": "/images/marketplaceimages/NFT-Shotgun.jpg"
+                    }
+                },
+                {
+                    "id": 4,
+                    "title": "",
+                    "slug": "/collection",
+                    "author": {
+                        "name": "",
+                        "slug": "/author"
+                    },
+                    "image": {
+                        "src": "/images/marketplaceimages/NFT-Sniper.jpg"
                     }
                 }
             ],
             "smallProducts": [
                 {
                     "id": 1,
-                    "title": "HasLivbe",
+                    "title": "Ammo",
                     "slug": "/collection",
                     "author": {
-                        "name": "Mark Jordan",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-sm-01.jpg"
+                        "src": "/images/marketplaceimages/Ammo.png"
                     }
                 },
                 {
                     "id": 2,
-                    "title": "Ladicorn Mos",
+                    "title": "Characters",
                     "slug": "/collection",
                     "author": {
-                        "name": "Farik Shaikh",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-sm-02.jpg"
+                        "src": "/images/marketplaceimages/Character_1.jpg"
                     }
                 },
                 {
                     "id": 3,
-                    "title": "Twinkle",
+                    "title": "Medicine",
                     "slug": "/collection",
                     "author": {
-                        "name": "John Doe",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-sm-03.jpg"
+                        "src": "/images/marketplaceimages/Medicine.jpg"
                     }
                 },
                 {
                     "id": 4,
-                    "title": "Monster",
+                    "title": "Weapon Extension",
                     "slug": "/collection",
                     "author": {
-                        "name": "Olive Yew",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-sm-04.jpg"
+                        "src": "/images/marketplaceimages/WeaponExtension.jpeg"
                     }
                 },
                 {
                     "id": 5,
-                    "title": "Labibas Had",
+                    "title": "Clothes",
                     "slug": "/collection",
                     "author": {
-                        "name": "Olive Yew",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-sm-05.jpg"
+                        "src": "/images/marketplaceimages/Clothes.jpg"
                     }
                 },
                 {
                     "id": 6,
-                    "title": "OperaHub",
+                    "title": "Utilities",
                     "slug": "/collection",
                     "author": {
-                        "name": "Ray Sin",
+                        "name": "",
                         "slug": "/author"
                     },
                     "image": {
-                        "src": "/images/banner/banner-sm-06.jpg"
+                        "src": "/images/marketplaceimages/Utilities.jpg"
                     }
                 }
             ]

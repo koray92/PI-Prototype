@@ -15,8 +15,6 @@ const Overview = (className) => (
         <Breadcrumb pageTitle="Overview" currentPage="Overview" />
         <main id="main-content">
             <Topside />
-            <h1 className="text-center mt-5">User Earn Chart (ETH)</h1>
-            <Chart />
         </main>
         <Footer />
     </Wrapper>

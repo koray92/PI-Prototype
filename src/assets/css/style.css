@@ -1,9 +1,7 @@
 
 html,
 body {
-    width: 1780px;
-    padding: 0;
-    margin: 0;
+
     font-family: "Montserrat";
 }
 .dashboard-top
@@ -50,9 +48,17 @@ body {
 }
 .dashboard-table-head-container
 {
-
     display: flex;
     justify-content: flex-start;
+    margin: auto;
+    padding:15px;
+    border: 2px solid #CEC5D0;
+    border-radius: 10px 10px 0px 0px;
+}
+.filter-weapons
+{
+    display: flex;
+    justify-content: space-around;
     margin: auto;
     padding:15px;
     border: 2px solid #CEC5D0;
@@ -466,4 +472,80 @@ body{
         overflow-x: auto
     }
 }
+
+.purple-progress-bar .progress-bar {
+    background-color: #6d09e5;
+}
+.aqua-progress-bar .progress-bar {
+    background-color: #01b3ff;
+}
+.red-progress-bar .progress-bar {
+    background-color: #f5344f;
+}
+.green-progress-bar .progress-bar {
+    background-color: #30c103;
+}
+.yellow-progress-bar .progress-bar {
+    background-color: #d6c638;
+}
+.blue-progress-bar .progress-bar {
+    background-color: #006CFF;
+}
+.orange-progress-bar .progress-bar {
+    background-color: #FF6100;
+}
+
+.tablo {
+    border-collapse: collapse;
+    width:50%;
+    margin-left:50px;
+    margin-top:100px;
+}
+.tablo td{
+    font-size: 15px;
+    color:white;
+    padding:20px;
+    border: none;
+}
+.tablo th {
+    font-size: 18px;
+    color:white;
+    font-weight: bold;
+    padding:20px;
+    border: none;
+}
+
+
+.blue__gradient {
+    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+    filter: blur(123px);
+}
+
+.pink__gradient {
+    background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+    filter: blur(900px);
+}
+
+.white__gradient {
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(750px);
+}
+.bidbutton {
+    background-color: #212d48;
+    border: none;
+    color: white;
+    padding: 15px 52px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    hover:
+}
+.bidbutton:hover {
+    background-color: #54668c;
+}
+
 

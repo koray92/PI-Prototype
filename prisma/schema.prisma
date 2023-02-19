@@ -23,6 +23,12 @@ model item {
   item_category String?        @db.VarChar(30)
   item_design   String?        @db.VarChar(30)
   item_image    String?        @db.VarChar(120)
+  accuracy      Int?
+  fire_rate     Int?
+  damage        Int?
+  mobility      Int?
+  range         Int?
+  control       Int?
   inventory     inventory[]
   transactions  transactions[]
 }

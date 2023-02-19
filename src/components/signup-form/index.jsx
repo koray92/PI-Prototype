@@ -25,7 +25,7 @@ const SignupForm = ({ className }) => {
     const { data: session } = useSession();
     useEffect(() => {
         if (session?.user) {
-            router.push('/product');
+            router.push('/home');
         }
     }, [router, session]);
     const onSubmit = async (data, e) => {
