@@ -12,7 +12,7 @@ const Overview = (className) => (
         <SEO pageTitle="About" />
 
         <Header />
-        <Breadcrumb pageTitle="Overview" currentPage="Overview" />
+        <Breadcrumb pageTitle="Marketplace - PIX" currentPage="Marketplace - PIX" />
         <main id="main-content">
             <Topside />
         </main>

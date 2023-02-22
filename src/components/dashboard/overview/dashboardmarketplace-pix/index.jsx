@@ -224,7 +224,7 @@ const dashboardcard = () => {
             }}
           >
               <div style={{ width: "20%",position:"relative"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance</h3>
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -249,7 +249,7 @@ const dashboardcard = () => {
                   </div>
               </div>
               <div style={{ width: "20%",position:"relative"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance</h3>
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />

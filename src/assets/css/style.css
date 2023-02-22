@@ -1,9 +1,9 @@
 
 html,
 body {
-
     font-family: "Montserrat";
 }
+
 .dashboard-top
 {
     width: 85%;
@@ -11,7 +11,6 @@ body {
     justify-content: space-between;
     margin: auto;
     padding:35px;
-
     border-right: 3px solid #CEC5D0;
     border-bottom: 3px solid #CEC5D0;
     border-left: 3px solid #CEC5D0;
@@ -542,10 +541,90 @@ body{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    hover:
 }
 .bidbutton:hover {
     background-color: #54668c;
+}
+.container2
+ {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.balancecard-container
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.balancecard-container-overview3tab
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.salescard-container
+{
+    display: flex;
+    justify-content: space-around;
+}
+.transactionstables-container
+{
+    display:flex;
+    justify-content: center;
+}
+.transactiontablesize{
+    width:750px;
+}
+.containerchart
+{
+    display: flex;
+    justifyContent: space-between;
+    background-color: #252434;
+    height: 500px;
+    border: 10px solid #46454f;
+}
+.categorychart
+{
+    height:300px ;
+}
+
+@media only screen and (max-width: 1300px) {
+    .balancecard-container-overview3tab
+    {
+        display: grid;
+    }
+
+}
+@media only screen and (max-width: 750px) {
+    .balancecard-container
+    {
+        display: grid;
+        margin-top: 20px;
+    }
+    .salescard-container
+    {
+        display: grid;
+    }
+
+}
+@media only screen and (max-width: 1300px) {
+    .transactionstables-container
+    {
+        display:grid;
+    }
+    .transactiontablesize{
+        width:700px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .containerchart
+    {
+        display: grid;
+        height: 800px;
+    }
 }
 
 

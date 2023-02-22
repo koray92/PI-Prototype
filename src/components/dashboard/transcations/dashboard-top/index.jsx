@@ -109,18 +109,11 @@ const topside = () => {
         console.log(`${Date.now()}------`);
     }, [userBalance,userTotalSale,userTotalVolume,session]);
     return (
-      <div style={{marginBottom:"80px"}}>
+      <div className="" style={{margin:"auto"}}>
           <div
-            style={{
-                marginTop: "20px",
-                marginBottom: "20px",
-                display: "flex",
-                justifyContent: "start",
-                paddingLeft:"220px"
-            }}
+            className="balancecard-container"
           >
-              <div style={{ width: "25%",position:"relative"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+              <div style={{ width: "350px",position:"relative",marginBottom:"30px"}}>
                   <div style={{position:"absolute",zIndex:"0",width:"300px",height:"300px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"300px",height:"300px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"300px",height:"300px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -129,8 +122,8 @@ const topside = () => {
 
                       <div style={leftdiv}>
                           <h6 style={text}>ETH:</h6>
-                          <h6 style={text}>{userBalance}</h6>
-                          <p style={textp}>${1500 * userBalance}</p>
+                          <h6 style={text}>{parseFloat(userBalance).toFixed(3)}</h6>
+                          <p style={textp}>${parseFloat(1500 * userBalance).toFixed(3)}</p>
                           <p style={textp2}>ETH</p>
                           <p style={textp3}>(+2.33%)</p>
 
@@ -144,8 +137,7 @@ const topside = () => {
 
                   </div>
               </div>
-              <div style={{ width: "25%",position:"relative",marginLeft:"200px"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+              <div style={{ width: "350px",position:"relative"}}>
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -171,13 +163,13 @@ const topside = () => {
 
           </div>
 
-          <div className="d-flex justify-content-around" style={{marginTop:"80px"}}>
-              <div style={{width:"30%",height:"300px"}}>
+          <div className="salescard-container" style={{marginTop:"80px"}}>
+              <div style={{width:"300px",height:"300px",marginBottom:"40px"}}>
                   <h2 className="mx-5 text-white">Sales:</h2>
                   <div className="d-flex">
                       <img src="/images/dashboard/graphicicon.png"></img>
                       <div style={{marginTop:"20px",marginLeft:"20px"}}>
-                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total of Sales:</h6>
+                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total # of Sales:</h6>
                           <div className="d-flex">
                             <h3 style={{lineHeight:"1.6"}}>9</h3>
                               <img
@@ -191,7 +183,7 @@ const topside = () => {
                   <div className="d-flex">
                       <img src="/images/dashboard/earnicon.png"></img>
                       <div style={{marginTop:"20px",marginLeft:"20px"}}>
-                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total of Volumes:</h6>
+                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total of Volume:</h6>
                           <div className="d-flex">
                               <h3 style={{lineHeight:"1.6"}}>12</h3>
                               <img
@@ -204,12 +196,12 @@ const topside = () => {
                       </div>
                   </div>
               </div>
-              <div style={{width:"30%",height:"300px"}}>
+              <div style={{width:"300px",height:"300px",marginBottom:"80px"}}>
                   <h2 className="mx-5 text-white">Purchase:</h2>
                   <div className="d-flex">
                       <img src="/images/dashboard/graphicicon.png"></img>
                       <div style={{marginTop:"20px",marginLeft:"20px"}}>
-                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total of Purchases:</h6>
+                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total # of Purchases:</h6>
                           <div className="d-flex">
                               <h3 style={{lineHeight:"1.6"}}>7.5</h3>
                               <img
@@ -224,7 +216,7 @@ const topside = () => {
                   <div className="d-flex">
                       <img src="/images/dashboard/earnicon.png"></img>
                       <div style={{marginTop:"20px",marginLeft:"20px"}}>
-                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total of Volumes:</h6>
+                          <h6 style={{lineHeight:"1",fontWeight:"normal"}}>Total of Volume:</h6>
                           <div className="d-flex">
                               <h3 style={{lineHeight:"1.6"}}>11.3</h3>
                               <img

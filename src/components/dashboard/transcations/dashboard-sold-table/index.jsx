@@ -65,9 +65,9 @@ const soldtable = () => {
     }, []);
 
     return (
-        <div className="me-2" style={{width:"48%"}}>
+        <div className="me-2 transactiontablesize">
             <div className="dashboard-top-no-border">
-                <h3>Recently Sold/Purchase:</h3>
+                <h3>Recently Sold/Purchased</h3>
             </div>
             <div style={{backgroundColor:"#252734"}}>
                 <ul
@@ -77,12 +77,13 @@ const soldtable = () => {
                 >
                   <li className="nav-item" role="presentation">
                     <button
-                      className="nav-link active"
+                      className="nav-link"
                       id="home-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#home"
                       type="button"
                       role="tab"
+                      style={{backgroundColor:"#00f6ff"}}
                       onClick={(e) => {
                         e.preventDefault();
                         setCategory(1);
@@ -90,7 +91,7 @@ const soldtable = () => {
                     >
                       <img
                         src="/images/transactionicons/tab1.png"
-                        width="50"
+                        width="60"
                         height="60"
                       />
                       <p style={{fontWeight:"bold",fontSize:"17px"}}>Weapon</p>
@@ -245,9 +246,6 @@ const soldtable = () => {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
 
                             </tr>
                         </thead>
@@ -257,53 +255,54 @@ const soldtable = () => {
                                 ([key, value]) =>
                                     value.transaction_type == "Sale" && (value.seller_wallet_id == session?.user.user_wallet_id || value.buyer_wallet_id == session?.user.user_wallet_id) && (
                                         <tr key={value}>
-                                            <td className="table-icon">
-                                                <img src={findItemImage(value.item_id)} />
-                                            </td>
-                                            <td>
-                                              <div className="">
-                                                <h6 className="color-white text-center" style={{fontSize:"12px",fontWeight:"300",margin:"auto",padding:"5px",backgroundColor:"#70B007",borderRadius:"15px"}}>
-                                                  {findItemName(value.item_id)}
-                                                </h6>
-                                                <p style={{textAlign:"center",fontSize:"12px",fontWeight:"100",}}>
-                                                  Breed Count:1
-                                                </p>
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div className="d-flex">
-                                                <div className="mx-2">
-                                                  <h6 style={{fontSize:"13px"}}>Buyer</h6>
-                                              <h6 style={{fontSize:"13px"}} className="font-monospace">{
+                                            <td className="">
+
+
+                                              <div className="d-flex justify-content-lg-start">
+                                                <div className="" style={{marginRight:"30px"}}>
+                                                  <img width="104px" height="104px" src={findItemImage(value.item_id)} />
+                                                </div>
+                                                <div className="" style={{marginRight:"30px"}}>
+
+                                                  <h5 className="color-white text-center" style={{width:"130px",fontSize:"17px",fontWeight:"300",margin:"auto",padding:"5px",backgroundColor:"#70B007",borderRadius:"15px"}}>
+                                                    {findItemName(value.item_id)}
+                                                  </h5>
+                                                  <p style={{textAlign:"center",fontSize:"15px",fontWeight:"100"}}>
+                                                    total # of items <br />in inventory:1
+                                                  </p>
+                                                </div>
+                                                <div style={{marginRight:"20px"}}>
+                                                  <h6 style={{fontSize:"16px"}}>Buyer</h6>
+                                              <h6 style={{fontSize:"16px"}} className="font-monospace">{
                                                 value.buyer_wallet_id == "0x144aad362af3B71d42781f8f750777B3523c500B" && "muratyvz13"
                                               }
                                                 {
                                                   value.buyer_wallet_id == "0xf9aD346CBa2eEB7d9738038002b614AdEa966dB6" && "Koray92"
                                                 }</h6>
                                                 </div>
-                                                <div>
-                                                  <h6 style={{fontSize:"13px"}}>Seller</h6>
-                                                  <h6 style={{fontSize:"13px"}} className="font-monospace">{
+                                                <div style={{marginRight:"20px"}}>
+                                                  <h6 style={{fontSize:"16px"}}>Seller</h6>
+                                                  <h6 style={{fontSize:"16px"}} className="font-monospace">{
                                               value.seller_wallet_id == "0x144aad362af3B71d42781f8f750777B3523c500B" && "muratyvz13"
                                             }
                                               {
                                                 value.seller_wallet_id == "0xf9aD346CBa2eEB7d9738038002b614AdEa966dB6" && "Koray92"
                                               }</h6>
                                               </div>
-                                              </div>
-                                          </td>
-                                            <td>
-                                              <div className="d-flex">
-                                                <div style={{display:"grid"}}>
-                                                  <h6 style={{marginBottom:"0px"}}>{value.eth_amount+" ETH"}</h6>
-                                                  <p style={{marginBottom:"0px"}}>{"$ "+value.eth_amount*1500}</p>
-                                                  <h6 style={{fontSize:"13px"}}>{value.transaction_timestamp.slice(0, 10)}{" "}</h6>
+                                                <div className="d-flex">
+                                                  <div style={{display:"grid"}}>
+                                                    <h6 style={{marginBottom:"0px"}}>{value.eth_amount+" ETH"}</h6>
+                                                    <p style={{marginBottom:"0px"}}>{"$ "+value.eth_amount*1500}</p>
+                                                    <h6 style={{fontSize:"13px"}}>{value.transaction_timestamp.slice(0, 10)}{" "}</h6>
 
+                                                  </div>
+                                                  <Link href={"https://goerli.etherscan.io/tx/"+value.transaction_hash} style={{cursor:"pointer"}}>
+                                                    <img src="/images/icons/arrow.png" style={{width:"20px",height:"20px",margin:"auto"}}></img>
+                                                  </Link>
                                                 </div>
-                                                <Link href={"https://goerli.etherscan.io/tx/"+value.transaction_hash} style={{cursor:"pointer"}}>
-                                                  <img src="/images/icons/arrow.png" style={{width:"20px",height:"20px",margin:"auto"}}></img>
-                                                </Link>
                                               </div>
+
+
                                             </td>
                                         </tr>
                                     )

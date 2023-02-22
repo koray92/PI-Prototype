@@ -17,10 +17,12 @@ const Transactions = (className) => (
           <Breadcrumb pageTitle="Transactions" currentPage="Transactions" />
             <Topside />
 
-            <div className="d-flex justify-content-center">
+          <div className="">
+            <div className="transactionstables-container">
                 <Listingtable />
                 <Soldtable />
             </div>
+          </div>
         </main>
         <Footer />
     </Wrapper>

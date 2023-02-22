@@ -109,17 +109,12 @@ const topside = () => {
         console.log(`${Date.now()}------`);
     }, [userBalance,userTotalSale,userTotalVolume,session]);
     return (
-      <div>
+      <div className="container">
           <div
-            style={{
-                display: "flex",
-                justifyContent: "start",
-                paddingLeft:"350px",
-                marginTop:"20px"
-            }}
+            className="balancecard-container"
           >
-              <div style={{ width: "35%",position:"relative"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+              <div style={{ width: "350px",position:"relative",marginBottom:"30px"}}>
+
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -143,8 +138,7 @@ const topside = () => {
 
                   </div>
               </div>
-              <div style={{ width: "35%",position:"relative",marginLeft:"200px"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (PIX)</h3>
+              <div style={{ width: "350px",position:"relative"}}>
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />

@@ -199,16 +199,12 @@ const dashboardcard = () => {
         }
     }, [session]);
     return (
-      <>
-          <div
-            style={{
-                marginTop: "20px",
-                display: "flex",
-                justifyContent: "space-around",
-            }}
+      <div className="container">
+          <div className="balancecard-container"
+
           >
-              <div style={{ width: "20%",position:"relative"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+              <div style={{ width: "350px",position:"relative",marginBottom:"30px"}}>
+
                   <div style={{position:"absolute",zIndex:"0",width:"300px",height:"300px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"300px",height:"300px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"300px",height:"300px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -232,8 +228,8 @@ const dashboardcard = () => {
 
                   </div>
               </div>
-              <div style={{ width: "20%",position:"relative"}}>
-                  <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (PIX)</h3>
+              <div style={{ width: "350px",position:"relative"}}>
+
                   <div style={{position:"absolute",zIndex:"0",width:"300px",height:"300px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"300px",height:"300px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"300px",height:"300px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -266,7 +262,7 @@ const dashboardcard = () => {
               </div>
           </div>
 
-                  <div style={{ width: "50%", margin: "50px",marginLeft:"100px" }}>
+                  <div style={{ width: "650px", margin: "auto" }}>
                       <h3>PIX Market Price</h3>
                       <div style={containercharttime}>
                           <div style={{margin:"auto"}}>
@@ -284,7 +280,7 @@ const dashboardcard = () => {
 
           </div>
 
-      </>
+      </div>
     );
 };
 

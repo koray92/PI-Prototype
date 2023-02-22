@@ -5,17 +5,17 @@
         "slug": "/collection",
         "total_item": 27,
         "image": {
-            "src": "/images/collection/collection-lg-01.jpeg"
+            "src": "/images/marketplaceimages/NFT-Rocket-Launcher.jpg"
         },
         "thumbnails": [
             {
-                "src": "/images/collection/collection-sm-01.jpeg"
+                "src": "/images/weapons/nft-1.png"
             },
             {
-                "src": "/images/collection/collection-sm-02.jpeg"
+                "src": "/images/weapons/nft-2.png"
             },
             {
-                "src": "/images/collection/collection-sm-03.jpeg"
+                "src": "/images/weapons/nft-3.png"
             }
         ],
         "profile_image": {
@@ -28,17 +28,17 @@
         "slug": "/collection",
         "total_item": 20,
         "image": {
-            "src": "/images/collection/collection-lg-02.jpeg"
+            "src": "/images/weapons/nft-7.png"
         },
         "thumbnails": [
             {
-                "src": "/images/collection/collection-sm-04.jpeg"
+                "src": "/images/weapons/nft-4.png"
             },
             {
-                "src": "/images/collection/collection-sm-05.jpeg"
+                "src": "/images/weapons/nft-5.png"
             },
             {
-                "src": "/images/collection/collection-sm-06.jpeg"
+                "src": "/images/weapons/nft-6.png"
             }
         ],
         "profile_image": {
@@ -51,17 +51,17 @@
         "slug": "/collection",
         "total_item": 15,
         "image": {
-            "src": "/images/collection/collection-lg-03.jpeg"
+            "src": "/images/weapons/nft-3.png"
         },
         "thumbnails": [
             {
-                "src": "/images/collection/collection-sm-07.jpeg"
+                "src": "/images/ammo/nft-ammo-1.png"
             },
             {
-                "src": "/images/collection/collection-sm-08.jpeg"
+                "src": "/images/marketplaceimages/Clothes.jpg"
             },
             {
-                "src": "/images/collection/collection-sm-09.jpeg"
+                "src": "/images/marketplaceimages/WeaponExtension.jpeg"
             }
         ],
         "profile_image": {
@@ -74,17 +74,17 @@
         "slug": "/collection",
         "total_item": 27,
         "image": {
-            "src": "/images/collection/collection-lg-04.jpeg"
+            "src": "/images/marketplaceimages/WeaponExtension.jpeg"
         },
         "thumbnails": [
             {
-                "src": "/images/collection/collection-sm-10.jpeg"
+                "src": "/images/marketplaceimages/Clothes.jpg"
             },
             {
-                "src": "/images/collection/collection-sm-11.jpeg"
+                "src": "/images/weapons/nft-2.png"
             },
             {
-                "src": "/images/collection/collection-sm-12.jpeg"
+                "src": "/images/weapons/nft-3.png"
             }
         ],
         "profile_image": {

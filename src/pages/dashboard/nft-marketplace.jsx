@@ -15,6 +15,8 @@ import homepageData from "../../data/homepages/home-03.json";
 import sellerData from "../../data/sellers.json";
 import productData from "../../data/products.json";
 import collectionsData from "../../data/collections.json";
+import Breadcrumb from "@components/breadcrumb";
+import React from "react";
 
 export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
@@ -37,7 +39,9 @@ const Home02 = () => {
         <Wrapper>
             <SEO pageTitle="Home Three" />
             <Header />
-            <Botside />
+          <Breadcrumb pageTitle="Marketplace - NFT" currentPage="Marketplace - NFT" />
+
+          <Botside />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />
 

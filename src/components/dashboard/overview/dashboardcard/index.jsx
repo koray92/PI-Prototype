@@ -143,13 +143,7 @@ const containerright = {
     border: "10px solid #46454f",
     zIndex:"5"
 };
-const containerchart = {
-    display: "flex",
-    justifyContent: "space-between",
-    backgroundColor: "#252434",
-    height: "500px",
-    border: "10px solid #46454f",
-};
+
 const containercharttime = {
     backgroundColor: "#252434",
     height: "600px",
@@ -192,13 +186,20 @@ const textp3 = {
 
 const dashboardcard = () => {
     const { data: session } = useSession();
-    const [key, setKey] = useState("Category");
+    const [purchasekey, setPurchasekey] = useState("Category");
+    const [earnkey, setEarnkey] = useState("Category");
     const [balance, setBalance] = useState(0);
-    const categoryClick = async () => {
-        setKey("Category");
+    const purchasecategoryClick = async () => {
+        setPurchasekey("Category");
     };
-    const timeClick = () => {
-        setKey("Time");
+    const purchasetimeClick = () => {
+        setPurchasekey("Time");
+    };
+    const earncategoryClick = async () => {
+        setEarnkey("Category");
+    };
+    const earntimeClick = () => {
+        setEarnkey("Time");
     };
     useEffect(() => {
         const userBalance = async () => {
@@ -215,16 +216,12 @@ const dashboardcard = () => {
         }
     }, [session]);
     return (
-        <>
+        <div className="container">
             <div
-                style={{
-                    marginTop: "20px",
-                    display: "flex",
-                    justifyContent: "space-around",
-                }}
+                className="balancecard-container"
             >
-                <div style={{ width: "20%",position:"relative"}}>
-                    <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+                <div style={{ width: "250px",position:"relative",marginBottom:"30px"}}>
+                    <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance </h3>
                     <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                     <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                     <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -233,8 +230,8 @@ const dashboardcard = () => {
 
                         <div style={leftdiv}>
                             <h6 style={text}>ETH:</h6>
-                            <h6 style={text}>{balance}</h6>
-                            <p style={textp}>${1500 * balance}</p>
+                            <h6 style={text}>{parseFloat(balance).toFixed(4)}</h6>
+                            <p style={textp}>${parseFloat(1500 * balance).toFixed(2)}</p>
                             <p style={textp2}>ETH</p>
                             <p style={textp3}>(+2.33%)</p>
 
@@ -242,14 +239,14 @@ const dashboardcard = () => {
                         <div style={rightdiv}>
                             <img
                                 src="/images/dashboard/eth.png"
-                                style={{ width: "130px" }}
+                                style={{ width: "130px",marginBottom:"30px" }}
                             />
                                </div>
 
                     </div>
                 </div>
-                <div style={{ width: "20%",position:"relative"}}>
-                    <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance (ETH)</h3>
+                <div style={{ width: "250px",position:"relative" ,marginBottom:"30px"}}>
+                    <h3 style={{zIndex:"5",position:"relative"}} className="container">Balance</h3>
                     <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                     <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                     <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
@@ -259,7 +256,7 @@ const dashboardcard = () => {
 
                         <div style={leftdiv}>
                             <h6 style={text}>PIX:</h6>
-                            <h6 style={text}>2.52000</h6>
+                            <h6 style={text}>2.5200</h6>
                             <p style={textp}>$0.04</p>
                             <p style={textp2}>PIX</p>
                             <p style={textp3}>(+2.33%)</p>
@@ -267,13 +264,13 @@ const dashboardcard = () => {
                         <div style={rightdiv}>
                             <img
                                 src="/images/dashboard/pixcoinicon.png"
-                                style={{ width: "130px" }}
+                                style={{ width: "130px",marginBottom:"30px" }}
                             />
                         </div>
                     </div>
                 </div>
 
-                <div style={{ width: "40%",position:"relative"}}>
+                <div style={{ width: "400px",position:"relative",marginBottom:"30px"}}>
 
                     <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                     <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
@@ -328,29 +325,29 @@ const dashboardcard = () => {
                 <button
                     type="button"
                     className="btn btn-dark mx-4"
-                    onClick={categoryClick}
+                    onClick={purchasecategoryClick}
                 >
                     Category
                 </button>
                 <button
                     type="button"
                     className="btn btn-dark"
-                    onClick={timeClick}
+                    onClick={purchasetimeClick}
                 >
                     Time
                 </button>
             </div>
             <Tabs
                 id="fill-tab-example"
-                activeKey={key}
-                onSelect={(k) => setKey(k)}
+                activeKey={purchasekey}
+                onSelect={(k) => setPurchasekey(k)}
                 className="mb-3"
                 style={{ margin: "40px", fontsize: "30px", display: "none" }}
             >
                 <Tab eventKey="Category" title="Category Chart">
-                    <div style={{ width: "60%", margin: "50px" ,marginLeft:"80px"}}>
+                    <div style={{ width: "850px", margin: "50px" ,marginLeft:"auto",marginRight:"auto"}}>
                         <h3>Total Purchase By Category</h3>
-                        <div style={containerchart}>
+                        <div className="containerchart">
                             <div
                                 style={{
                                     width: "300px",
@@ -362,9 +359,11 @@ const dashboardcard = () => {
                             </div>
                             <div
                                 style={{
-                                    width: "55%",
-                                    height: "300px",
-                                    marginTop: "30px",
+                                    width: "470px",
+                                    height: "900px",
+                                    marginRight:"auto",
+                                    marginLeft:"auto",
+                                    marginTop:"30px",
                                     padding: "30px",
                                 }}
                             >
@@ -410,11 +409,129 @@ const dashboardcard = () => {
                     </div>
                 </Tab>
                 <Tab eventKey="Time" title="Time Chart">
-                    <div style={{ width: "50%", margin: "50px" }}>
+                    <div style={{ width: "800px", margin: "50px" ,marginLeft:"auto",marginRight:"auto"}}>
                         <h3>Total Purchase By Time</h3>
                         <div style={containercharttime}>
                             <h5 className="text-center">Expense Trend</h5>
-                            <h1 className="text-center">7,423</h1>
+                            <h1 className="text-center"  style={{lineHeight:"1"}}>7,423</h1>
+                            <div className="d-flex justify-content-center my-5">
+                                <div>
+                                    <h6 className="text-center">Total purchased: </h6>
+                                </div>
+                                <div>
+                                    <h6 className="text-center" style={{margin:"0px",marginLeft:"10px"}}>{"   "}5 ETH </h6>
+                                    <h6 className="text-center" style={{margin:"0px",marginLeft:"10px"}}>{"   "}(150 PIX) </h6>
+                                </div>
+                            </div>
+                            <Bar options={options} data={databarchart} />
+                        </div>
+                    </div>
+                </Tab>
+            </Tabs>
+
+            <div className="my-5" style={{marginLeft:"80px"}}>
+                <h4 className="d-inline-block mx-5 my-5 py-1">Filter:</h4>
+                <button
+                  type="button"
+                  className="btn btn-dark mx-4"
+                  onClick={earncategoryClick}
+                >
+                    Category
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-dark"
+                  onClick={earntimeClick}
+                >
+                    Time
+                </button>
+            </div>
+            <Tabs
+              id="fill-tab-example"
+              activeKey={earnkey}
+              onSelect={(k) => setEarnkey(k)}
+              className="mb-3"
+              style={{ margin: "40px", fontsize: "30px", display: "none" }}
+            >
+                <Tab eventKey="Category" title="Category Chart">
+                    <div style={{ width: "850px", margin: "50px" ,marginLeft:"auto",marginRight:"auto"}}>
+                        <h3>Total Earnings By Category</h3>
+                        <div className="containerchart">
+                            <div
+                              style={{
+                                  width: "300px",
+                                  height: "300px",
+                                  margin: "auto",
+                              }}
+                            >
+                                <Doughnut data={data} options={options} />
+                            </div>
+                            <div
+                              style={{
+                                  width: "470px",
+                                  height: "900px",
+                                  marginRight:"auto",
+                                  marginLeft:"auto",
+                                  marginTop:"30px",
+                                  padding: "30px",
+                              }}
+                            >
+                                {datas.map((item) => (
+                                  <div key={item.id} className="my-4">
+                                      <h6 style={{ lineHeight: "0.2" }}>
+                                          {item.title}:
+                                      </h6>
+                                      <div className="d-flex justify-content-between">
+                                          <div
+                                            style={{
+                                                width: "90%",
+                                                color: "red",
+                                                backgroundcolor: "red",
+                                            }}
+                                          >
+                                              <ProgressBar
+                                                className={
+                                                    item.backgroundcolor
+                                                }
+                                                style={{
+                                                    backgroundColor:
+                                                      "#1d3568",
+                                                }}
+                                                now={+item.percentage}
+                                              />
+                                          </div>
+
+                                          <div>
+                                              <p
+                                                style={{
+                                                    lineHeight: "0.5",
+                                                }}
+                                              >
+                                                  {item.percentage} %
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </Tab>
+                <Tab eventKey="Time" title="Time Chart">
+                    <div style={{ width: "800px", margin: "50px",marginLeft:"auto",marginRight:"auto"}}>
+                        <h3>Total Earnings By Time</h3>
+                        <div style={containercharttime}>
+                            <h5 className="text-center">Expense Trend</h5>
+                            <h1 className="text-center" style={{lineHeight:"1"}}>7,423</h1>
+                            <div className="d-flex justify-content-center my-5">
+                                <div>
+                                    <h6 className="text-center">Total purchased: </h6>
+                                </div>
+                                <div>
+                                    <h6 className="text-center" style={{margin:"0px",marginLeft:"10px"}}>{"   "}10 ETH </h6>
+                                    <h6 className="text-center" style={{margin:"0px",marginLeft:"10px"}}>{"   "}(300 PIX) </h6>
+                                </div>
+                            </div>
                             <Bar options={options} data={databarchart} />
                         </div>
                     </div>
@@ -428,10 +545,10 @@ const dashboardcard = () => {
 
 
             </div>
-            <div style={{marginLeft:"40px"}}>
+            <div>
             <Table />
             </div>
-        </>
+        </div>
     );
 };
 

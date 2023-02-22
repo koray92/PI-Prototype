@@ -94,9 +94,9 @@ const listingtable = ({ posts }) => {
     }, []);
 
     return (
-        <div className="me-2" style={{width:"48%"}}>
+        <div className="me-2 transactiontablesize">
             <div className="dashboard-top-no-border">
-                <h3>Current offered NFTs:</h3>
+                <h3>Currently offered NFTs:</h3>
 
             </div>
 
@@ -108,12 +108,13 @@ const listingtable = ({ posts }) => {
               >
                 <li className="nav-item" role="presentation">
                   <button
-                    className="nav-link active"
+                    className="nav-link"
                     id="home-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#home"
                     type="button"
                     role="tab"
+                    style={{backgroundColor:"#00f6ff"}}
                     onClick={(e) => {
                       e.preventDefault();
                       setCategory(1);
@@ -237,7 +238,7 @@ const listingtable = ({ posts }) => {
                   >
                     <img
                       src="/images/transactionicons/tab5.png"
-                      width="52"
+                      width="60"
                       height="30"
                     />
                     <p style={{fontWeight:"bold",fontSize:"17px",marginBottom:"0px"}}>Weapon</p>
@@ -296,7 +297,7 @@ const listingtable = ({ posts }) => {
                                                     {findItemName(value.item_id)}
                                                 </h5>
                                                 <p style={{textAlign:"center",fontSize:"15px",fontWeight:"100",}}>
-                                                    Breed Count:1
+                                                  total # of items in inventory:1
                                                 </p>
                                             </div>
                                         </td>
@@ -307,6 +308,8 @@ const listingtable = ({ posts }) => {
                                                       src="/images/transactionicons/range1.png"
                                                       width="35"
                                                       height="35"
+                                                      alt="Accuracy"
+                                                      title="Accuracy"
                                                       style={{alignItems: "top",paddingBottom:"3px"}}
                                                     />
 
@@ -317,6 +320,8 @@ const listingtable = ({ posts }) => {
                                                       src="/images/transactionicons/range2.png"
                                                       width="35"
                                                       height="35"
+                                                      alt="Fire Rate"
+                                                      title="Fire Rate"
                                                       style={{alignItems: "top",paddingBottom:"3px"}}
                                                     />
                                                     <h6 className="text-center">{findPower2(value.item_id)}</h6>
@@ -326,6 +331,8 @@ const listingtable = ({ posts }) => {
                                                       src="/images/transactionicons/range3.png"
                                                       width="35"
                                                       height="35"
+                                                      alt="Damage"
+                                                      title="Damage"
                                                       style={{alignItems: "top",paddingBottom:"3px"}}
                                                     />
                                                     <h6 className="text-center">{findPower3(value.item_id)}</h6>
@@ -335,6 +342,8 @@ const listingtable = ({ posts }) => {
                                                       src="/images/transactionicons/range4.png"
                                                       width="35"
                                                       height="35"
+                                                      alt="Mobility"
+                                                      title="Mobility"
                                                       style={{alignItems: "top",paddingBottom:"3px"}}
                                                     />
                                                     <h6 className="text-center">{findPower4(value.item_id)}</h6>
@@ -344,6 +353,8 @@ const listingtable = ({ posts }) => {
                                                       src="/images/transactionicons/range5.png"
                                                       width="35"
                                                       height="35"
+                                                      alt="Range"
+                                                      title="Range"
                                                       style={{alignItems: "top",paddingBottom:"3px"}}
                                                     />
                                                     <h6 className="text-center">{findPower5(value.item_id)}</h6>
@@ -353,6 +364,8 @@ const listingtable = ({ posts }) => {
                                                   src="/images/transactionicons/range6.png"
                                                   width="35"
                                                   height="35"
+                                                  alt="Control"
+                                                  title="Control  "
                                                   style={{alignItems: "top",paddingBottom:"3px"}}
                                                 />
                                                 <h6 className="text-center">{findPower6(value.item_id)}</h6>

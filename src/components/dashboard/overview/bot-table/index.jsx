@@ -10,13 +10,13 @@ function Tablo() {
   const icon = {
     width:"30px",
     height:"30px",
-    margin:"auto"
+    margin:"auto",
   };
     return (
-      <table className="tablo" style={{backgroundColor:"#252434",borderRadius:"25px"}}>
+      <table className="tablo" style={{backgroundColor:"#252434",borderRadius:"25px",marginRight:"auto",marginLeft:"auto"}}>
           <thead>
           <tr>
-            <h5 style={{padding:"20px"}}>Accomplishments</h5>
+            <h5 style={{padding:"20px",width:"300px"}}>Accomplishments</h5>
           </tr>
           <tr style={{backgroundColor:"rgba(255, 255, 255, 0.2)"}}>
               <th>Category</th>
@@ -36,18 +36,18 @@ function Tablo() {
                 <td>
                   { satir.perfcompared > 0 ?
                     <div style={icon}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-6 h-6 color-green">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18" />
                     </svg>
                   </div>  : (satir.perfcompared == 0
                       ?
                       <div style={icon}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-6 h-6 color-yellow">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                         </svg>
                       </div> :
                       <div style={icon}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-6 h-6 color-red">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
                         </svg>
                       </div>) }
