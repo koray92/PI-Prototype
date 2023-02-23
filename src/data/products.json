@@ -10,7 +10,7 @@
             "currency": "wETH"
         },
         "likeCount": 322,
-        "categories": ["music", "video"],
+        "categories": ["Weapon", "Ammo"],
         "images": [
             {
                 "src": "/images/marketplaceimages/NFT-Rocket-Launcher.jpg"
@@ -298,7 +298,7 @@
             "currency": "wETH"
         },
         "likeCount": 322,
-        "categories": ["art", "video"],
+        "categories": ["Charecters", "Ammo"],
         "images": [
             {
                 "src": "/images/marketplaceimages/NFT-Shotgun.jpg"
@@ -586,7 +586,7 @@
             "currency": "wETH"
         },
         "likeCount": 12,
-        "categories": ["music", "lowest"],
+        "categories": ["Weapon", "Clothes"],
         "images": [
             {
                 "src": "/images/marketplaceimages/NFT-Handgun.jpg"
@@ -874,7 +874,7 @@
             "currency": "wETH"
         },
         "likeCount": 20,
-        "categories": ["video", "highest"],
+        "categories": ["Ammo", "Medicine"],
         "images": [
             {
                 "src": "/images/marketplaceimages/NFT-rifle.jpg"
@@ -1162,7 +1162,7 @@
             "currency": "wETH"
         },
         "likeCount": 205,
-        "categories": ["collectionable", "art"],
+        "categories": ["Weapon Extensions", "Charecters"],
         "images": [
             {
                 "src": "/images/ammo/nft-ammo-1.png"
@@ -1450,7 +1450,7 @@
             "currency": "wETH"
         },
         "likeCount": 205,
-        "categories": ["highest", "music"],
+        "categories": ["Medicine", "Weapon"],
         "images": [
             {
                 "src": "/images/marketplaceimages/NFT-Sniper.jpg"
@@ -1738,7 +1738,7 @@
             "currency": "wETH"
         },
         "likeCount": 322,
-        "categories": ["lowest", "art"],
+        "categories": ["Utilities", "Charecters"],
         "images": [
             {
                 "src": "/images/ammo/nft-ammo-1.png"
@@ -2025,7 +2025,7 @@
             "currency": "wETH"
         },
         "likeCount": 420,
-        "categories": ["collectionable", "video"],
+        "categories": ["Weapon Extensions", "Ammo"],
         "images": [
             {
                 "src": "/images/extras/nft-extras-2.png"
@@ -2312,10 +2312,10 @@
             "currency": "wETH"
         },
         "likeCount": 20,
-        "categories": ["music", "video"],
+        "categories": ["Weapon", "Ammo"],
         "images": [
             {
-                "src": "/images/utilities/nft-utilities-1.png"
+                "src": "/images/marketplaceimages/Clothes.jpg"
             },
             {
                 "src": "/images/portfolio/lg/portfolio-01.jpg"
@@ -2599,7 +2599,7 @@
             "currency": "wETH"
         },
         "likeCount": 205,
-        "categories": ["highest", "collectionable"],
+        "categories": ["Medicine", "Weapon Extensions"],
         "images": [
             {
                 "src": "/images/ammo/nft-ammo-2.png"
@@ -2886,7 +2886,7 @@
             "currency": "wETH"
         },
         "likeCount": 502,
-        "categories": ["lowest", "art"],
+        "categories": ["Clothes", "Charecters"],
         "images": [
             {
                 "src": "/images/weapons/nft-5.png"
@@ -3173,7 +3173,7 @@
             "currency": "wETH"
         },
         "likeCount": 308,
-        "categories": ["music", "video"],
+        "categories": ["Weapon", "Ammo"],
         "images": [
             {
                 "src": "/images/weapons/nft-4.png"
@@ -3460,7 +3460,7 @@
             "currency": "wETH"
         },
         "likeCount": 500,
-        "categories": ["music", "highest"],
+        "categories": ["Weapon", "Ammo"],
         "images": [
             {
                 "src": "/images/weapons/nft-2.png"
@@ -3747,7 +3747,7 @@
             "currency": "wETH"
         },
         "likeCount": 542,
-        "categories": ["collectionable", "music"],
+        "categories": ["Weapon Extensions", "Weapon"],
         "images": [
             {
                 "src": "/images/weapons/nft-3.png"
@@ -4034,7 +4034,7 @@
             "currency": "wETH"
         },
         "likeCount": 345,
-        "categories": ["art", "video"],
+        "categories": ["Charecters", "Ammo"],
         "images": [
             {
                 "src": "/images/weapons/nft-1.png"

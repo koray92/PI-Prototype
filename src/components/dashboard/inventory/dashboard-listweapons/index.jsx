@@ -128,8 +128,8 @@ const topside = () => {
 
                             <div style={leftdiv}>
                                 <h6 style={text}>ETH:</h6>
-                                <h6 style={text}>{balance}</h6>
-                                <p style={textp}>${1500 * balance}</p>
+                                <h6 style={text}>{parseFloat(balance).toFixed(3)}</h6>
+                                <p style={textp}>${parseInt(1500 * balance).toFixed(2)}</p>
                                 <p style={textp2}>ETH</p>
                                 <p style={textp3}>(+2.33%)</p>
 
@@ -190,7 +190,7 @@ const topside = () => {
                     </div>
 
                 </div>
-                <div style={{ width: "35%",marginRight:"auto",marginLeft:"auto",marginBottom:"30px",marginTop:"30px"}}>
+                <div style={{ width: "400px",marginRight:"auto",marginLeft:"auto",marginBottom:"30px",marginTop:"30px"}}>
                     <h4 style={{zIndex:"5",position:"relative"}} className="container">Total Volume of selected Categories:</h4>
                     <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                     <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
@@ -394,7 +394,7 @@ const topside = () => {
 
                 <div className="row">
                     {Object.entries(inventory).map(([key, value]) => (
-                       category == 0 && <div className="col-xl-3 col-lg-3 col-sm-6" style={{margin:"30px",width:"25%",height:"450px",backgroundColor:"#242436",borderRadius:"25px"}}>
+                       category == 0 && <div className="col-xl-3 col-lg-3 col-sm-6" style={{margin:"30px",width:"25%",height:"500px",backgroundColor:"#242436",borderRadius:"25px"}}>
                             <div>
                                 <img
                                     className="mt-2"

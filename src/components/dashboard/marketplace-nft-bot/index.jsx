@@ -123,8 +123,8 @@ const topside = () => {
 
                       <div style={leftdiv}>
                           <h6 style={text}>ETH:</h6>
-                          <h6 style={text}>{userBalance}</h6>
-                          <p style={textp}>${1500 * userBalance}</p>
+                          <h6 style={text}>{parseFloat(userBalance).toFixed(4)}</h6>
+                          <p style={textp}>${parseFloat(1500 * userBalance).toFixed(3)}</p>
                           <p style={textp2}>ETH</p>
                           <p style={textp3}>(+2.33%)</p>
 

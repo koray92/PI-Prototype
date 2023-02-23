@@ -213,8 +213,8 @@ const dashboardcard = () => {
 
                       <div style={leftdiv}>
                           <h6 style={text}>ETH:</h6>
-                          <h6 style={text}>{balance}</h6>
-                          <p style={textp}>${1500 * balance}</p>
+                          <h6 style={text}>{parseFloat(balance).toFixed(4)}</h6>
+                          <p style={textp}>${parseFloat(1500 * balance).toFixed(3)}</p>
                           <p style={textp2}>ETH</p>
                           <p style={textp3}>(+2.33%)</p>
 
