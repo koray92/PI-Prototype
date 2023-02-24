@@ -289,8 +289,8 @@
     },
     {
         "id": 2,
-        "title": "Shotgun",
-        "slug": "21-the-wonder",
+        "title": "Knife",
+        "slug": "2",
         "published_at": "21-JUN-2021 08:03:00",
         "latestBid": "1/20",
         "price": {
@@ -301,7 +301,7 @@
         "categories": ["Charecters", "Ammo"],
         "images": [
             {
-                "src": "/images/marketplaceimages/NFT-Shotgun.jpg"
+                "src": "/images/marketplaceimages/NFT-knife.jpeg"
             },
             {
                 "src": "/images/portfolio/lg/2.jpg"

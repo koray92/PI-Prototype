@@ -10,6 +10,7 @@ import BidTab from "@components/product-details/bid-tab";
 import PlaceBet from "@components/product-details/place-bet";
 import { ImageType } from "@utils/types";
 import Web3 from "web3";
+import { useSession } from "next-auth/react";
 import nftabi from "../../../server/subscribe/nftcontractabi";
 import nftmarketabi from "../../../server/subscribe/nftmarketplacecontractabi";
 import { useEffect, useState } from "react";
@@ -23,6 +24,7 @@ const ProductDetailsArea = ({ space, className, product }) => {
         "https://goerli.infura.io/v3/53987d06438846efb4411f45609e07e1"
       )
     );
+    const { data: session } = useSession();
     const nftcontractadress = "0x91e4B151198FFF14AAC0040574992bb3889cA3aC";
     const nftmarketcontractadress =
       "0x81692C9CceD929fC99149dD8018729cb832050dd";
@@ -75,7 +77,7 @@ const ProductDetailsArea = ({ space, className, product }) => {
     }
     getBids();
     if (typeof window !== "undefined") {
-      setWalletaddress(web3.utils.toChecksumAddress(window?.ethereum.selectedAddress));
+      setWalletaddress(Web3.utils.toChecksumAddress(session?.user?.user_wallet_id));
     }
   },[product]);
     return (

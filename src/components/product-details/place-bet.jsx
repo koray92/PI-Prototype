@@ -16,6 +16,7 @@ import { useSession } from "next-auth/react";
 import { ToastContainer, toast } from 'react-toastify';
 
 import { prisma } from "../../../server/db/client";
+import { HTTP_WEB3 } from "@utils/variables";
 
 const ethers = require("ethers");
 const PlaceBet = ({
@@ -289,11 +290,11 @@ const PlaceBet = ({
         getusername();
         const userBalance = async () => {
             const balance = await HTTP_WEB3?.eth.getBalance(
-                window?.ethereum.selectedAddress
+              Web3.utils.toChecksumAddress(session?.user?.user_wallet_id)
             );
             const ethBalance = Web3?.utils.fromWei(balance, "ether");
             setUserBalancefloat(parseFloat(ethBalance).toFixed(3));
-            setUserAddress(Web3.utils.toChecksumAddress(window?.ethereum.selectedAddress));
+            setUserAddress(Web3.utils.toChecksumAddress(session?.user?.user_wallet_id));
             console.log(`-----${userBalance}---s-`);
         };
         userBalance();

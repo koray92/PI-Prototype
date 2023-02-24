@@ -127,7 +127,6 @@ const topside = () => {
                           <p style={textp}>${parseFloat(1500 * userBalance).toFixed(3)}</p>
                           <p style={textp2}>ETH</p>
                           <p style={textp3}>(+2.33%)</p>
-
                       </div>
                       <div style={rightdiv}>
                           <img
@@ -135,17 +134,13 @@ const topside = () => {
                             style={{ width: "130px" }}
                           />
                       </div>
-
                   </div>
               </div>
               <div style={{ width: "350px",position:"relative"}}>
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px"}} className="pink__gradient" />
                   <div style={{position:"absolute",zIndex:"1",width:"200px",height:"200px",bottom:"10px"}} className="white__gradient rounded-circle" />
                   <div style={{position:"absolute",zIndex:"0",width:"200px",height:"200px",bottom:"10px",right:"10px"}} className="blue__gradient rounded-circle" />
-
-
                   <div style={container}>
-
                       <div style={leftdiv}>
                           <h6 style={text}>PIX:</h6>
                           <h6 style={text}>2.52000</h6>

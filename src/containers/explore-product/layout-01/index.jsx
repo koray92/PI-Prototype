@@ -25,7 +25,6 @@ function reducer(state, action) {
 const ExploreProductArea = ({ className, space, data }) => {
     const itemsToFilter = [...data.products];
 
-
     useEffect(() => {
 
     }, []);
