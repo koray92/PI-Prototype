@@ -446,7 +446,7 @@ const PlaceBet = ({
 
                     </div>
 
-                 </div>) : (( (owner!= undefined) ? (price!=0 ?(<h4>Please use your saved wallet.</h4>) : <h4>Solded</h4>) : <h4>Solded</h4> ))}
+                 </div>) : (( (owner!= undefined) ? (price!=0 ?(<h4>Please use your saved wallet.</h4>) : <h4>Sold</h4>) : <h4>Sold</h4> ))}
 
 
             </div>

@@ -411,15 +411,11 @@ const topside = () => {
                                           style={{ width: "40px",height:"40px" }}
                                         />
                                         <h4 className=" text-center" style={{fontWeight:"normal",marginRight:"10px"}}>
-                                            2
+                                            { value.item.item_name == "Hand Gun" && "0,0065"  }
+                                            { value.item.item_name == "Knife" && "0,0019"  }
+
                                         </h4>
-                                        <img
-                                          src="/images/dashboard/pixcoinicon.png"
-                                          style={{ width: "40px",height:"40px" }}
-                                        />
-                                        <h4 className=" text-center" style={{fontWeight:"normal"}}>
-                                            30
-                                        </h4>
+
 
                                     </div>
 
