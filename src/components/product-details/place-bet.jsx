@@ -297,8 +297,10 @@ const PlaceBet = ({
             setUserAddress(Web3.utils.toChecksumAddress(session?.user?.user_wallet_id));
             console.log(`-----${userBalance}---s-`);
         };
-        userBalance();
-    }, []);
+        if (session) {
+            userBalance();
+        }
+    }, [session]);
 
     const handleBidModal = () => {
         setShowBidModal((prev) => !prev);
